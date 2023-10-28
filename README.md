@@ -1,26 +1,26 @@
-# Clase Data
+# Clase SimpleBehaviorSubject
 
-La clase `Data` es una implementación genérica que permite el seguimiento de un valor de datos y notifica a los observadores cuando ese valor cambia. Es útil en situaciones en las que desees mantener un valor y permitir que múltiples partes de tu aplicación se suscriban a cambios en ese valor.
+La clase `SimpleBehaviorSubject` es una implementación genérica que permite el seguimiento de un valor de datos y notifica a los observadores cuando ese valor cambia. Es útil en situaciones en las que desees mantener un valor y permitir que múltiples partes de tu aplicación se suscriban a cambios en ese valor.
 
 ## Uso
 
-Para comenzar a usar la clase `Data`, sigue estos pasos:
+Para comenzar a usar la clase `SimpleBehaviorSubject`, sigue estos pasos:
 
-1. Importa la clase `Data` y la interfaz `DataI` desde tus archivos.
+1. Importa la clase `SimpleBehaviorSubject` y la interfaz `SimpleBehaviorSubjectI` desde tus archivos.
 
    ```   typescript
-   import { Data } from "./data";
+   import { SimpleBehaviorSubject } from "simple-behavior-subject";
 
-   Crea una instancia de Data proporcionando un valor inicial.
+   Crea una instancia de SimpleBehaviorSubject proporcionando un valor inicial.
    
    ```   typescript 
-    const data = new Data<number>(42);
+    const SimpleBehaviorSubject = new SimpleBehaviorSubject<number>(42);
     Registra observadores para recibir actualizaciones cuando el valor cambie.
 
 
    ```   typescript
  
-    data.subscribe((newValue) => {
+    SimpleBehaviorSubject.subscribe((newValue) => {
     console.log(`Valor actualizado: ${newValue}`);
     });
 
@@ -28,7 +28,7 @@ Para comenzar a usar la clase `Data`, sigue estos pasos:
 
   
    ```   typescript
-    data.update(100);
+    SimpleBehaviorSubject.update(100);
     Los observadores registrados recibirán notificaciones con el nuevo valor.
 
  
@@ -36,7 +36,7 @@ Para comenzar a usar la clase `Data`, sigue estos pasos:
 
 ## Métodos
 
-La clase Data proporciona los siguientes métodos:
+La clase SimpleBehaviorSubject proporciona los siguientes métodos:
 
 subscribe(observer: (value: T) => void): void: Registra un observador para recibir actualizaciones del valor de datos.
 
@@ -48,20 +48,20 @@ Ejemplo completo
 
    ```   typescript
  
-    import { Data } from "./data";
+    import { SimpleBehaviorSubject } from "./SimpleBehaviorSubject";
 
-    const data = new Data<number>(42);
+    const SimpleBehaviorSubject = new SimpleBehaviorSubject<number>(42);
 
-    data.subscribe((newValue) => {
+    SimpleBehaviorSubject.subscribe((newValue) => {
     console.log(`Valor actualizado: ${newValue}`);
     });
 
-    data.update(100);
+    SimpleBehaviorSubject.update(100);
 
-Este es un ejemplo simple de cómo usar la clase Data para rastrear y notificar cambios en un valor de datos en tu aplicación.
+Este es un ejemplo simple de cómo usar la clase SimpleBehaviorSubject para rastrear y notificar cambios en un valor de datos en tu aplicación.
  
 
-Espero que esta información te sea útil para comprender y utilizar la clase `Data` en tu proyecto. Si tienes alguna pregunta adicional o necesitas más aclaraciones, no dudes en preguntar.
+Espero que esta información te sea útil para comprender y utilizar la clase `SimpleBehaviorSubject` en tu proyecto. Si tienes alguna pregunta adicional o necesitas más aclaraciones, no dudes en preguntar.
 
 
 

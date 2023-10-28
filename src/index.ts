@@ -1,10 +1,8 @@
-// data.ts
-
-// Importamos la interfaz DataI desde el archivo data.types
+ 
 import { SimpleBehaviorSubjectI } from "./index.types";
 
-// Definimos una clase genérica llamada Data que implementa la interfaz DataI
-export class SimpleBehaviorSubject<T> implements SimpleBehaviorSubject<T> {
+// Definimos una clase genérica llamada SimpleBehaviorSubject que implementa la interfaz SimpleBehaviorSubjectI
+export class SimpleBehaviorSubject<T> implements SimpleBehaviorSubjectI<T> {
   private value: T; // Valor de datos que se almacenará y notificará a los observadores.
   private subscribers: ((value: T) => void)[] = []; // Lista de observadores que reciben notificaciones cuando los datos cambian.
 
