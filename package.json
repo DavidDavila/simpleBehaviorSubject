@@ -1,6 +1,6 @@
 {
   "name": "simple-behavior-subject",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Una clase genérica 'Data' para el seguimiento de valores y notificación de cambios en una aplicación TypeScript.",
   "main": "index.js",
   "scripts": {
