@@ -1,5 +1,5 @@
 {
-  "name": "simpleBehaviorSubject",
+  "name": "simple-behavior-subject",
   "version": "1.0.0",
   "description": "Una clase genérica 'Data' para el seguimiento de valores y notificación de cambios en una aplicación TypeScript.",
   "main": "index.js",
